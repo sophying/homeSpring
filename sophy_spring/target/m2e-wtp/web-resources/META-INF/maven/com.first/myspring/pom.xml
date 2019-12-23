@@ -13,6 +13,17 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
+
+<!-- 추가 Spring plugins    -->	
+	<repositories>
+		<repository>
+			<id>Spring Plugins</id>
+			<url>https://repo.spring.io/plugins-release/</url>
+		</repository>
+	</repositories>
+	
+	
+		
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -20,6 +31,7 @@
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework-version}</version>
 			<exclusions>
+			
 				<!-- Exclude Commons Logging in favor of SLF4j -->
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -32,13 +44,51 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-				
+
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
 		</dependency>	
+		
+		
+<!-- 추가   -->			
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.8.13</version>
+		</dependency>
+		
+				
+<!-- 추가   -->		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>4.3.20.RELEASE</version>
+		</dependency>
+		
+<!-- 추가   -->		
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+
+<!-- 추가   -->
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
+		<dependency>
+		    <groupId>com.oracle</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>12.1.0.1-atlassian-hosted</version>
+		    <scope>test</scope>
+		</dependency>
+
+
+		
 		
 		<!-- Logging -->
 		<dependency>
@@ -156,3 +206,4 @@
         </plugins>
     </build>
 </project>
+
